@@ -6,7 +6,7 @@ use CGI;
 my $q=CGI->new;
 my ( @inp ) =$q->param('origtext') =~ /^([\w.-]*)$/;
 my ( $table ) =$q->param('dict') =~ /^([\w.-]*)$/;
-open TBL, '<:encoding(utf8)', "$table";
+open my TBL, '<:encoding(utf8)', "$table";
 my @tbl=<TBL>;
 our $word;
 our @words;
